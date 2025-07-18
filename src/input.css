@@ -1,0 +1,289 @@
+@import "tailwindcss";
+
+/* Custom styles for ATS-friendly resume with accessibility optimizations */
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Calibri, Tahoma, Verdana, Georgia, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+  }
+  
+  /* Accessibility: Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* Accessibility: Focus visible for keyboard navigation */
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+  
+  /* Accessibility: High contrast focus indicators */
+  *:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+  
+  /* Accessibility: Ensure sufficient color contrast */
+  a:focus {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+  
+  /* Accessibility: Improve readability and reduce motion for users with vestibular disorders */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Accessibility: High contrast mode support */
+  @media (prefers-contrast: high) {
+    body {
+      background: white;
+      color: black;
+    }
+    
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+    
+    a:visited {
+      color: #551A8B;
+    }
+    
+    h1, h2, h3 {
+      color: black;
+    }
+  }
+  
+  /* Ensure consistent typography hierarchy */
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #111827;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Professional spacing and typography */
+  p, li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ATS-friendly link styling */
+  a {
+    color: #374151;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #111827;
+  }
+}
+
+/* Responsive layout utilities */
+@layer components {
+  .resume-container {
+    max-width: 48rem; /* 768px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+  }
+  
+  .section-spacing {
+    margin-bottom: 1.5rem;
+  }
+  
+  .job-header-responsive {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .contact-info-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 640px) {
+  .resume-container {
+    padding: 0.75rem;
+  }
+  
+  h1 {
+    font-size: 1.875rem;
+    text-align: center;
+  }
+  
+  .job-header-responsive {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .contact-info-responsive {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .employment-dates {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .resume-container {
+    padding: 1.5rem;
+  }
+  
+  .job-header-responsive {
+    gap: 1rem;
+  }
+}
+
+/* Print-specific styles for ATS compliance and professional appearance */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+  }
+  
+  .resume-container {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5in !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  
+  h1 {
+    font-size: 18pt !important;
+    margin-bottom: 8pt !important;
+  }
+  
+  h2 {
+    font-size: 14pt !important;
+    margin-bottom: 6pt !important;
+    margin-top: 12pt !important;
+  }
+  
+  h3 {
+    font-size: 12pt !important;
+    margin-bottom: 4pt !important;
+  }
+  
+  p, li {
+    font-size: 11pt !important;
+    margin-bottom: 4pt !important;
+  }
+  
+  .section-spacing {
+    margin-bottom: 12pt !important;
+  }
+  
+  .job-entry {
+    margin-bottom: 8pt !important;
+    page-break-inside: avoid;
+  }
+  
+  .contact-info-responsive {
+    justify-content: center !important;
+    gap: 12pt !important;
+  }
+  
+  /* Remove shadows and rounded corners for print */
+  .shadow-md {
+    box-shadow: none !important;
+  }
+  
+  .rounded-lg {
+    border-radius: 0 !important;
+  }
+  
+  /* Ensure proper page breaks */
+  section {
+    page-break-inside: avoid;
+  }
+  
+  /* Print-friendly links */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  
+  /* Show URLs for important links in print */
+  a[href^="mailto:"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  a[href^="tel:"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+

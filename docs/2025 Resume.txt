@@ -1,0 +1,43 @@
+Chicago, IL
+(317) 332-5843
+mikaiyl.davis@gmail.com
+S. Mikaiyl Davis-Morris
+
+EXPERIENCE
+IDEXX Labs, Remote US — Application Developer II (Full Stack)
+March 2022 - Present
+Developed APIs on Amazon Web Services handling 9.6M+ daily requests with 99.99% uptime
+Took ownership to implement and deploy migration of ElasticSearch v4 to OpenSearch v2 
+Performed SQL query optimizations and index design to reduce query execution time
+Hosted Lunch & Learn presentation to explore modern frontend libraries
+Migrated legacy AngularJS 2.* frontend to React 18+
+Volunteered as software health champion to lead system reliability improvements
+Helped replace Jenkins CI/CD configs in Groovy with GitHub Actions YAML
+IDEXX Labs, Remote US — Application Developer I (Full Stack)
+September 2019 - March 2022
+Worked on Java and C# based desktop and IoT application suite with 65,000+ users
+Designed and implemented upgrades to enable cloud integrations
+Global timezone onboarding and management feature
+Replacing stateful in-memory workflows with stateless database operations
+Setup logging and reporting for user behavior metadata and telemetry in app UI
+Wrote Python scripts to analyze log data and identify anomalies
+Contributed to troubleshooting longstanding communications issue with desktop app and IoT device by exploring and debugging embedded system communication
+Kenzie Academy Studio, Indianapolis — Full Stack Junior Developer
+April 2019 - September 2019
+Created React JS frontend with 100s of active daily users backed by Open LMS (Canvas)
+Designed and implemented Django + DRF micro-service for custom reporting
+Implemented new test suite using Selenium and BeautifulSoup4
+LifeLine Data Centers, Indianapolis — Network Operations Tech
+March 2018 - September 2019
+Monitored and managed network connectivity at colocation data center
+Worked on network infrastructure, access control and manual hardware modification
+Automated manual nightly system reporting tasks with PowerShell and Python
+EDUCATION
+Kenzie Academy, Indianapolis — Certificate
+April 2018 - April 2019
+Year-long immersive program in full stack development, database design, and software engineering best practices. Completed capstone projects demonstrating proficiency in JavaScript frameworks, API development in NodeJS and Python, and deployment workflows.
+OTHER EXPERIENCE
+Indy-Cologne Sister City Committee - Since June 2019
+SKILLS
+Java, JVM, Spring Framework, JavaScript, TypeScript, Node, React, MySQL, PostgreSQL, MongoDB, Redis, SQLite3, AWS, CI/CD, Docker, Terraform, CloudFormation, Jenkins, GitHub Actions, Design patterns, Data Structures, Automation Testing, Swagger, OpenAPI, Karate, Selenium, API Development, ElasticSearch/OpenSearch, Front-end, Back-end, Full-stack
+

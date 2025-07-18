@@ -1,0 +1,33 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "ATS-compliant resume site",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "build:clean": "pnpm run clean && pnpm run build",
+    "verify": "node scripts/verify-deployment.js",
+    "accessibility": "node scripts/accessibility-check.js",
+    "test": "pnpm run build && pnpm run accessibility"
+  },
+  "keywords": [
+    "resume",
+    "ats",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "terser": "^5.43.1",
+    "vite": "^7.0.4"
+  }
+}
