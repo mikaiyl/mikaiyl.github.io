@@ -20,7 +20,7 @@
   ],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@latest",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/postcss": "^4.1.11",
